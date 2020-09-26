@@ -9,8 +9,10 @@ The maven command will create a JAR file rsa-cli-1.0-jar-with-dependencies.jar i
 ## 2.	How to Run the app
 java -jar rsa-cli-1.0-jar-with-dependencies.jar generate-shard-encrypt-reassemble-decrypt-assert thisisyoursecret
 
-The above command will run a test that 
-1.	Creates the RSA key pair with a Private Key broken into 5 shards (in the same directory where JAR file exists)
+The above command will create PUBLIC.TXT, Shard1.TXT, Shard2.TXT, Shard3.TXT, Shard4.TXT and Shard5.TXT files in the same directory where JAR file exists.
+
+The command will also run a unit test that 
+1.	Creates the RSA key pair with a Private Key broken into 5 shards 
 2.	Encrypts a random plain text string using the RSA Public Key.
 3.	Reassembles the Private Key using shard 2 & 5.
 4.	Decrypts the cypher text back into the plain text using the reassembled Private Key.
