@@ -7,7 +7,7 @@ mvn package
 The maven command will create a JAR file rsa-cli-1.0-jar-with-dependencies.jar in /target directory.
 
 ## 2.	How to Run the app
-java -jar rsa-cli-1.0-jar-with-dependencies.jar generate-shard-encrypt-reassemble-decrypt-assert <plainTextWithoutSpace>
+java -jar rsa-cli-1.0-jar-with-dependencies.jar generate-shard-encrypt-reassemble-decrypt-assert thisisyoursecret
 
 The above command will run a test that 
 1.	Creates the RSA key pair with a Private Key broken into 5 shards (in the same directory where JAR file exists)
